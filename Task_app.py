@@ -99,7 +99,8 @@ def create_new_task_window():
     description_entry.place(x=140, y=90, width=300, height=300)
 
     def create_new_task():
-        """Gets the length of the data in the json file and creates a new task_id based on the length
+        """Gets the length of the data in the json file and creates a new task_id based on the
+        length
 
         Gets the information from the:
         > title_entry
@@ -108,7 +109,8 @@ def create_new_task_window():
         and create a new_data entry in the form of a dictionary. Save that data to a json file
 
         If any fields are empty, warning lets the user know
-        if the task was created successfully lets the user know and clears all fields ready for new entry
+        if the task was created successfully lets the user know and clears all fields ready for new
+        entry
         fixes the task_id keys in the JSON in case anything was deleted
         updates the listbox after the entry.
         """
@@ -134,8 +136,8 @@ def create_new_task_window():
         if len(title) == 0 or len(description) == 0:
             messagebox.showwarning(title="Oops", message="Please dont leave any fields empty!")
         else:
-            # if everything is filled out, it tries opening the json file to read if the file does not
-            # exist, it creates a new one and saves the new task entry in to the file
+            # if everything is filled out, it tries opening the json file to read if the file
+            # does not exist, it creates a new one and saves the new task entry in to the file
             try:
                 with open("tasks_data.json", "r") as df:
                     data = json.load(df)
