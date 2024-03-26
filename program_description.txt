@@ -1,0 +1,61 @@
+Constants
+BUTTON_WIDTH: Width of the buttons in the UI.
+FONT: Font style and size for the UI elements.
+
+================================   Functions   =======================================================
+
+clear_fields(title, description):
+- This function clears the entry boxes in the new task window when a user tries to enter a new task
+as a way of showing the action of adding a new task has worked
+
+
+read_file():
+- this function simply reads the file and returns the contents of it to reduce repetition of code
+
+update_listbox():
+- Clears the listbox and reads data from the JSON file. Populates the listbox with tasks from the data
+this was created so the listbox would keep updating any time there was a change to the JSON file so the
+user can see all the changes
+
+create_new_task_window():
+- This function creates a new window to create a new task.
+- it contains the create_new_task function within itself, so the button creates once pressed can
+collect all the contents of the entry boxes and create a new task
+if entry boxes are empty there are pop up boxes to let the user know to fill up the boxes
+
+read_selected_task_window():
+- this function opens a new window and shows the contents of the selected task from the listbox
+it's only in the read format
+
+edit_selected_task_window():
+- opens a new window of the selected task and allows the user to edit the contents of the task. once
+the user confirms the change, the task is updated and the listbox reflects that
+
+fix_task_ids():
+- this function iterates through the JSON file and makes sure all the keys are always in ascending numerical
+order. in case a task was deleted, so there would not be any error when searching for selected tasks in the
+listbox. it also makes more sense and looks more pleasing
+
+delete_selected_task():
+- Simply deletes the task selected in the dropbox and updates the listbox it confirms with the user
+that they want to delete first
+
+
+=============================   Main Program    ==========================================================
+
+JSON File Handling:
+Create an initial JSON file if it doesn't exist in case it was deleted or just not created initialy in the
+repository transfer
+
+UI Setup:
+Creates the main window.
+Define a listbox to display tasks.
+Configure scrollbar for the listbox.
+
+Populates the listbox with existing tasks.(if empty lets user know to create tasks)
+
+Buttons:
+"Read selected": Opens a window to read details of a selected task.
+"Edit selected": Opens a window to edit details of a selected task.
+"Delete selected": Deletes a selected task.
+"New task": Opens a window to create a new task.
