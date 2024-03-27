@@ -32,9 +32,9 @@ application interface.
 **3) Editing a Task:**
 
 - Select a task from the listbox.
-- Click the "Edit selected" button.
+- Click the *Edit selected* button.
 - Update the title and description of the task in the provided fields.
-- Click the "Confirm" button to save the changes.
+- Click the *Confirm* button to save the changes.
 
 **4) Deleting a Task:**
 
